@@ -24,13 +24,19 @@ main{
 .box:nth-child(2n){
     background-color: #000;
 }
+.checkers_white,
+.checkers_black {
+    background-size: contain;
+}
 .checkers_white{
     background-image: url(../img/checkers_white.png);
-    background-size: contain;
 }
 .checkers_black{
     background-image: url(../img/checkers_black.png);
-    background-size: contain;
+}
+.checkers_white:hover,
+.checkers_black:hover {
+    cursor: pointer;
 }
 .box2{
     top:0;
