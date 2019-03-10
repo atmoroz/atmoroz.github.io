@@ -1,0 +1,77 @@
+body {
+    width: 1920px;
+    text-align: center;
+    font: 400 18px/1.6 'Segoe UI';
+    color:  #464b4f;
+}
+.container {
+    width: 1000px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+header {
+    color: #ffffff;
+    background-color: #23232e;
+    padding: 80px 0 42px;
+}
+header h1 {
+    margin-bottom: 77px;
+}
+.logo {
+    margin-bottom: 186px;
+}
+h1 {
+    font-size: 80px;
+    line-height: 0.37;
+}
+
+h1,
+h3 {
+    text-transform: uppercase;
+}
+header p {
+    padding: 0 270px;
+    margin-bottom: 183px;
+}
+/* ---------------main------------------ */
+main,
+.whatIDo {
+    box-sizing: border-box;
+}
+main {
+    background-image: url(../img/bg.png);
+    padding: 118px 0 80px;
+}
+main p {
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 0 0 42px;
+    padding: 0 68px;
+}
+.aboutMyself {
+    margin-bottom: 124px;
+}
+.wrapper{
+    font-size: 0;
+    padding: 0 11px 0 28px;
+    margin-top: 92px;
+}
+.whatIDo {
+    display: inline-block;
+    width: calc((100%-61px*2)/3);
+    vertical-align: text-top;
+    text-align: left;
+}
+.whatIDo h3{
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+/* .whatIDo:nth-child(2){
+    padding: 0 0px;
+} */
+.whatIDo p{
+    padding: 0;
+    font-size: 18px;
+    color: #888a8b;
+    line-height: 1.6;
+}
