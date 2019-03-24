@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'museo_sans_rounded100';
+    src: url('museosansrounded-100-webfont.woff2') format('woff2'),
+         url('museosansrounded-100-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html,
+body {
+    min-height: 100%;
+}
+body {
+    background: url(../img/background.jpg) no-repeat;
+    background-size: cover;
+    padding: 50px 108px;
+    font: 14px/1.3 'museo_sans_rounded100';
+    letter-spacing: .02em;
+    color: #e1e1e1;
+}
+.layot {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+.layot_item {
+    width: 686px;
+    height: 392px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+    background: #111a28;
+    box-shadow: 0 0 65px #000000;
+}
+.product {
+    display: flex;
+}
+.product_main {
+    width: 400px;
+    flex-shrink: 0;
+}
+.product_picture {
+    display: flex;
+    justify-content: center;
+    padding: 56px 0 42px;
+}
+.product_line {
+    margin-bottom: 29px;
+}
+/* end product */
+/* start header */
+.header {
+    padding: 24px 0 10px 22px;
+}
+/* end header */
+aside {
+    padding: 0 52px 0 42px;
+}
+/* start title */
+.title_h1 {
+    font-size: 24px;
+    line-height: 1.1;
+}
+.title_designation {
+    line-height: 1.85;
+    opacity: .54;
+}
+/* end title */
+/* start stars */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.rating_star:nth-child(1n-2)::before {
+    content: '\2605';
+    color: #9da1a6;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+.rating_star:nth-child(n+3)::before{
+    content: '\2605';
+    color: gold;
+}
+.rating_star:hover::before,
+.rating_star:hover ~ .rating_star::before {
+    color: #f7bf16;
+    cursor: pointer;
+}
+/* end stars */
+/* start customer_choice */
+.customer_choice {
+    display: flex;
+}
+.customer_choice_list {
+    position: relative;
+}
+.customer_choice_size,
+.customer_choice_quantity {
+    position: relative;
+    min-width: 69px;
+    font: 14px/1.3 'museo_sans_rounded100';
+    color: #e1e1e1;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background-color: transparent;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    padding: 7px 14px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+    appearance: none;
+}
+.customer_choice_list::before {
+    content: "\2228";
+    position: absolute;
+    font-size: 10px;
+    color: #e1e1e1;
+    right: 10px;
+    top: 11px;
+    cursor: pointer;
+}
+.customer_choice_list__left {
+    margin-right: 5px;
+}
+/* end customer_choice */
+/* start button */
+.button {
+    border: 1px solid rgba(255, 255, 255, .26);
+    border-radius: 0;
+    font: 14px/1.3 'museo_sans_rounded100';
+    color: #e1e1e1;
+    text-transform: capitalize;
+    padding: 8px 0;
+    letter-spacing: 0.02em;
+    min-width: 184px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .26);
+}
+/* end button */
+
+/* start dots */
+.dots {
+    text-align: center;
+}
+.dots_radio {
+    opacity: 0;
+    position: relative;
+    z-index:1;
+}
+.dots_radio + .dots_item {
+    content: '';
+    background: white;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 20px;
+    border: 0;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.dots_radio + .dots_item__active {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 2px solid #6e737c;
+    margin-top: 0;
+    margin-left: -3px;
+}
+.dots_item.dots_item__tomato {
+    background: #ed3333;
+}
+.dots_item.dots_item__sky {
+    background: #29e3ea;
+}
+/* end dots */
