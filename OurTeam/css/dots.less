@@ -1,0 +1,25 @@
+.dots {
+    text-align: center;
+    &_radio {
+        opacity: 0;
+        position: relative;
+        z-index:1;
+        cursor: pointer;
+    }
+    &_radio + &_item {
+        content: '';
+        background: @colorGold;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        margin-left: -15px;
+    }
+    &_radio + &_item__active {
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        border: 1px solid @colorGold;
+    }
+}

@@ -1,0 +1,39 @@
+@widthContent: 1140px;
+.content {
+    min-width: @widthContent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    &_inner {
+        width: @widthContent;
+    }
+    &_inner:first-of-type {
+        padding-top: 20px;
+        margin-bottom: 40px;
+    }
+    &_inner:last-of-type {
+        padding-bottom: 20px;
+    }
+    &_line {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    &_line::before,
+    &_line::after {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid @colorGold;
+        top: 9px;
+        width: 210px;
+    }
+    &_line::before {
+        margin-left: -125px;
+    }
+    &_line::after {
+        margin-left: 125px;
+    }
+}

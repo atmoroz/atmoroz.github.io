@@ -1,0 +1,1 @@
+.dots{text-align:center}.dots_radio{opacity:0;position:relative;z-index:1}.dots_radio+.dots_item{content:'';background:#ffcc00;position:absolute;width:10px;height:10px;border-radius:20px;border:1px solid transparent;cursor:pointer}.dots_radio+.dots_item__active{width:10px;height:10px;background:transparent;border:1px solid #ffcc00;margin-top:0;margin-left:-3px}
