@@ -1,5 +1,13 @@
 @colorGrey: #666666;
 @colorGold: #ffcc00;
+.frame {
+    content: '';
+    position: absolute;
+    border-color: @colorGold;
+    border-style: solid;
+    height: 100px;
+    width: 100px;
+}
 .person {
     &_item {
         display: flex;
@@ -8,12 +16,10 @@
         position: relative;
     }
     &_item::before{
-        content: '';
-        position: absolute;
+        .frame;
         height: 560px;
+        width: 0;
         top: 0;
-        border-color: @colorGold;
-        border-style: solid;
         border-width: 0 1px 0 0;
         left: 50%;
     }
@@ -27,16 +33,17 @@
         width: 418px;
         margin: 0 auto;
     }
-    &_photo::before,
-    &_photo::after,
-    &_image::before,
+    &_photo::before {
+        .frame;
+    }
+    &_photo::after {
+        .frame;
+    }
+    &_image::before {
+        .frame;
+    }
     &_image::after {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        content: '';
-        border-color: @colorGold;
-        border-style: solid;
+        .frame;
     }
 
     &_photo::before {
@@ -71,10 +78,8 @@
         margin-bottom: 48px;
     }
     &_name::before {
-        content: "";
-        position: absolute;
-        width: 100px;
-        border-bottom: 1px solid @colorGold;
+        .frame;
+        border-width: 0 0 1px 0;
         bottom: -30px;
         left: 244px;
     }
