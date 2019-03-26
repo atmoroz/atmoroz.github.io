@@ -1,6 +1,6 @@
 @colorGrey: #666666;
 @colorGold: #ffcc00;
-.frame {
+.frame() {
     content: '';
     position: absolute;
     border-color: @colorGold;
@@ -16,7 +16,7 @@
         position: relative;
     }
     &_item::before{
-        .frame;
+        .frame();
         height: 560px;
         width: 0;
         top: 0;
@@ -34,16 +34,16 @@
         margin: 0 auto;
     }
     &_photo::before {
-        .frame;
+        .frame();
     }
     &_photo::after {
-        .frame;
+        .frame();
     }
     &_image::before {
-        .frame;
+        .frame();
     }
     &_image::after {
-        .frame;
+        .frame();
     }
 
     &_photo::before {
@@ -78,7 +78,7 @@
         margin-bottom: 48px;
     }
     &_name::before {
-        .frame;
+        .frame();
         border-width: 0 0 1px 0;
         bottom: -30px;
         left: 244px;
