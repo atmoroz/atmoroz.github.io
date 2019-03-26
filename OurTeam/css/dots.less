@@ -3,20 +3,22 @@
     &_radio {
         opacity: 0;
         position: relative;
+        top: -3px;
+        left: 1px;
         z-index:1;
         cursor: pointer;
     }
     &_radio + &_item {
         content: '';
-        background: @colorGold;
         position: absolute;
         width: 10px;
         height: 10px;
+        background: @colorGold;
         border-radius: 20px;
         border: 1px solid transparent;
         margin-left: -15px;
     }
-    &_radio + &_item__active {
+    &_radio:checked + &_item {
         width: 10px;
         height: 10px;
         background: transparent;
