@@ -1,0 +1,23 @@
+.form {
+    &_input {
+        width: 100%;
+        background: #f0f0f0;
+        border-radius: 3px;
+        border: none;
+        text-indent: 15px;
+        height: 40px;
+        margin: 7px 0;
+        outline: none;
+        &__shot {
+            width: calc(50% - 8px);
+        }
+        &:last-of-type:not(&__shot) {
+            margin-bottom: 14px;
+        }
+    }
+
+    &_justify {
+        display: flex;
+        justify-content: space-between;
+    }
+}

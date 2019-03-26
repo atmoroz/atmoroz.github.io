@@ -1,0 +1,27 @@
+.account {
+    font: 400 13px/1.5 'Arial', sans-serif;
+    color: #7a7b7f;
+    &_title {
+        font-size: 24px;
+        color: #1b1c1d;
+        display: flex;
+        align-items: center;
+        margin: 0 0 6px 0;
+    }
+    &_title::before {
+        content: '';
+        background: url(../img/key.png) no-repeat;
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin-right: 10px;
+    }
+    &_text {
+        margin: 0 0 26px;
+    }
+    &_link {
+        text-decoration: none;
+        color: #ea355a;
+        cursor: pointer;
+    }
+}
