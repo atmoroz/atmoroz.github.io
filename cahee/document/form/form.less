@@ -1,0 +1,73 @@
+@import "../../css/set.less";
+.form {
+    &_input {
+        width: 100%;
+        padding: 18px 5px 15px;
+        margin-bottom: 16px;
+        text-indent: 15px;
+        border: none;
+        background: rgba(0,196,196, .5);
+        outline: none;
+        box-sizing: border-box;
+        &::placeholder {
+            font: 300 15px/1.8 'Raleway', sans-serif;
+            color: #ffffff;
+        }
+        &:-internal-autofill-previewed {
+            background: rgba(0,196,196, .5);
+        }
+        &:focus {
+            background:  rgba(0,196,196, 1);
+            border-left: 4px solid #355b82;
+            transition: background .3s;
+            &::-webkit-input-placeholder { 
+                color:transparent;
+                transition: color .3s; 
+            }
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+        &__height {
+            border: 1px solid @colorDark;
+            padding: 21px 5px 16px;
+            margin-bottom: 0;
+            text-indent: 9px;
+            background: transparent;
+            box-sizing: border-box;
+            &:focus {
+                background: transparent;
+                border: 1px solid #96b92c;
+            }
+            &::placeholder {
+                color: black;
+                opacity: .5;
+            }
+        }
+    }
+    &_textarea {
+        width: 100%;
+        min-height: 250px;
+        background-color: rgba(0,196,196, .5);
+        text-indent: 15px;
+        padding: 12px 5px 0;
+        border: none;
+        resize: none;
+        outline: none;
+        box-sizing: border-box;
+        &::placeholder {
+            font: 300 15px/1.8 'Raleway', sans-serif;
+            color: #ffffff;
+        }
+        &:focus {
+            background:  rgba(0,196,196, 1);
+            border-left: 4px solid #355b82;
+            &::-webkit-input-placeholder { 
+                color:transparent;
+                transition: color .3s;
+            }
+        }
+    }
+}

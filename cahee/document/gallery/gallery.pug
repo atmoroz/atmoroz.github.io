@@ -1,0 +1,30 @@
+include ../title/title.pug
+include ../text/text.pug
+include ../button/button.pug
+mixin gallery()
+    section.gallery#gallery
+        .container
+            .gallery_inner
+                +title ({
+                className: 'title_gallery',
+                text: 'Gallery'
+                })
+                +text ({
+                className: 'text_gallery',
+                text: 'Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                })
+            .gallery_row
+                .gallery_img.gallery_img__big
+                    img.gallery_img__img(src="../../img/gallery_01.jpg")
+                .gallery_img.gallery_col
+                    .gallery_img.gallery_img__small
+                        img.gallery_img__img(src="../../img/gallery_02.jpg")
+                    .gallery_img.gallery_img__small
+                        img.gallery_img__img(src="../../img/gallery_03.jpg")
+            .gallery_row
+                .gallery_img.gallery_img__medium
+                    img.gallery_img__img(src="../../img/gallery_04.jpg")
+                .gallery_img.gallery_img__medium
+                    img.gallery_img__img(src="../../img/gallery_05.jpg")
+            .gallery_button
+                +button ('blue','VIEW MORE')

@@ -1,0 +1,54 @@
+@import "../../css/set.less";
+
+@imgBig: calc((100% / 3 * 2) - 15px);
+@imgSmall: calc(100% / 3 - 15px);
+@imgMedium: calc(100% / 2 - 15px);
+.gallery {
+    padding: 122px;
+    background-color: #FFE92F;
+    &_inner {
+        width: 600px;
+        text-align: center;
+        margin: 0 auto 42px;
+    }
+    &_row {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -15px;
+        margin-bottom: 28px;
+    }
+    &_img {
+        &__big {
+            flex-basis: @imgBig;
+        }
+        &__small {
+            flex-basis: @imgSmall;
+        }
+        &__medium {
+            width: @imgMedium;
+            margin: 0 15px;
+            &:first-of-type {
+                margin-left: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        &__img {
+            &:hover {
+                box-shadow: 0 2px 5px rgba(0,0,0,.5);
+            }
+        }
+    }
+    &_col {
+        width: @imgSmall;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &_button {
+        text-align: center;
+        padding-top: 15px;
+        margin-left: -22px;
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../css/set.less";
+.button {
+    text-transform: uppercase;
+    font: 300 20px/1.35 'Raleway', sans-serif;
+    color: #ffffff;
+    border: none;
+    width: 200px;
+    height: 55px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: color .3s;
+    outline: none;
+    padding: 0;
+    text-indent: 10px;
+    transition: background-color .3s;
+    &__brown {
+        background: #ff6033;
+        &:hover {
+            background: #ffffff;
+            color: #ff6033;
+        }
+    }
+
+    &__blue {
+        background: #5585a2;
+        &:hover {
+            background: #ffffff;
+            color: #5585a2;
+        }
+    }
+
+    &__olive {
+        width: 170px;
+        background-color: rgba(150, 185, 44, 1);
+        margin-right: -3px;
+        &:hover {
+            background-color: #2f3950;
+        }
+    }
+    &__red {
+        background-color: rgba(247, 43, 59, 1);
+        margin-left: -25px;
+        &:hover {
+            background-color: #ffffff;
+            color: rgba(247, 43, 59, 1);
+        }
+    }
+}

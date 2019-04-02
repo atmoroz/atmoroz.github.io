@@ -1,0 +1,5 @@
+mixin form(param)
+    if param.textarea == false
+        input.form_input(class=param.modifier type=param.type name=param.name placeholder=param.placeholder)
+    else
+        textarea.form_textarea(name=param.name placeholder=param.placeholder)

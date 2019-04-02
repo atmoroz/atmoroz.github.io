@@ -1,0 +1,13 @@
+mixin nav()
+    nav.nav
+        ul.nav_menu
+            +navLink('#header','home')
+            +navLink('#aboutUs','about')
+            +navLink('#services','services')
+            +navLink('#gallery','gallery')
+            +navLink('#blog','blog')
+            +navLink('#contact','contact')
+
+mixin navLink(id,name)
+    li.nav_item
+        a.nav_link(href=id)= name
