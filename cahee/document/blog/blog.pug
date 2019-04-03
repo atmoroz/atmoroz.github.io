@@ -1,0 +1,47 @@
+mixin blog()
+    section.blog#blog
+        .container
+            .blog_inner
+                +title ({
+                className: 'title_blog',
+                text: 'blog'
+                })
+                +text ({
+                className: 'text_blog',
+                text: 'Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.'
+                })
+            .blog_gallery
+                +img ({
+                className: 'blog_img__photo1',
+                number: '20',
+                month: 'nov',
+                title: 'Green Smoothies: Too Much of a Good Thing?',
+                subtitle: 'By Auskteez - 2 hours ago'
+                })
+                +img ({
+                className: 'blog_img__photo2',
+                number: '14',
+                month: 'nov',
+                title: 'Growing Food and a “Thirst” for Innovation',
+                subtitle: 'By Auskteez - 3 hours ago'
+                })
+                +img ({
+                className: 'blog_img__photo3',
+                number: '10',
+                month: 'nov',
+                title: 'Pesticides & Food: What You Need to Know',
+                subtitle: 'By Auskteez - 6 hours ago'
+                })
+            .blog_button
+                +button('red','view more')
+
+
+
+mixin img(param)
+    .blog_img(class= param.className)
+        .blog_img__date
+            p.blog_img__number= param.number
+            p.blog_img__month= param.month
+        .blog_img__recommend
+            h3.blog_img__title= param.title
+            p.blog_img__subtitle= param.subtitle

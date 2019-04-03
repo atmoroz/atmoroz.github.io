@@ -1,0 +1,74 @@
+@import "../../css/reset.less";
+@import "../../css/fonts.less";
+.blog {
+    text-align: center;
+    background-color: #B07CF7;
+    padding: 120px 0;
+    color: #ffffff;
+    &_inner {
+        width: 570px;
+        margin: 0 auto;
+    }
+    &_gallery {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 48px -10px;
+    }
+    &_img {
+        position: relative;
+        width: calc(100% / 3 - 22px);
+        height: 310px;
+        &__photo1 {
+            background-image: linear-gradient(top, rgba(255,255,255,.0) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0.8) 100%),url(../../img/blog_01.jpg);
+
+        }
+        &__photo2 {
+            background-image: linear-gradient(top, rgba(255,255,255,.0) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0.8) 100%),url(../../img/blog_02.jpg);
+        }
+        &__photo3 {
+            background-image: linear-gradient(top, rgba(255,255,255,.0) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0.8) 100%),url(../../img/blog_03.jpg);
+        }
+        &__info {
+            position: relative;
+        }
+        &__date {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+            color: #ffffff;
+            background: rgba(0, 0, 0, .5);
+            top: 30px;
+            left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        &__number {
+            font: 700 32px/0.781 'Raleway', sans-serif;
+        }
+        &__month {
+            font: 400 21px/1.19 'Raleway Heavy';
+            text-transform: uppercase;
+        }
+        &__recommend {
+            position: absolute;
+            text-align: left;
+            bottom: 30px;
+            left: 20px;
+        }
+        &__title {
+            font: 700 20px/1.25 'Raleway', sans-serif;
+            padding-right: 40px;
+        }
+        &__subtitle {
+            font: 300 13px/1.92 'Raleway', sans-serif;
+            margin: 12px 0 -12px;
+        }
+        &:hover {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+            cursor: pointer;
+            transition: box-shadow .2s;
+        }
+    }
+}

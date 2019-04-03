@@ -1,0 +1,25 @@
+include document/header/header.pug
+include ./document/aboutUs/aboutUs.pug
+include ./document/services/services.pug
+include ./document/gallery/gallery.pug
+include document/subscribe/subscribe.pug
+include document/blog/blog.pug
+include document/contact/contact.pug
+include document/footer/footer.pug
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title = "cahee"
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+        <link rel="stylesheet" href="css/style.css"/>
+    body
+        +header()
+        +aboutUs()
+        +services()
+        +gallery()
+        +subscribe()
+        +blog()
+        +contact()
+        +footer()
