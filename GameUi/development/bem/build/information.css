@@ -1,0 +1,49 @@
+.information {
+  display: none;
+  padding: 60px 42px 60px 0;
+}
+.information_product {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  text-align: center;
+}
+.information_topline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.information_rating {
+  font-size: 20px;
+  color: #aaadbb;
+  padding: 18px;
+  border: 2px solid #aaadbb;
+  border-radius: 50%;
+  position: relative;
+}
+.information_rating::after {
+  content: '';
+  position: absolute;
+  background: url(../img/elipse.png);
+  width: 63px;
+  height: 73px;
+  top: -2px;
+  right: -5px;
+}
+.information_title {
+  font-size: 32px;
+  line-height: 0.625;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.information_subtitle {
+  font-size: 14px;
+}
+.information_text {
+  color: #b7bacd;
+  margin-bottom: 54px;
+}
+.information_img {
+  margin-bottom: 20px;
+}

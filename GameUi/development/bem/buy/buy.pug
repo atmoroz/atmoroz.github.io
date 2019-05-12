@@ -1,0 +1,19 @@
+mixin buy(value)
+    section(class=value.className)
+        .buy_product
+            .buy_img
+                img(src=value.imgUrl)
+            +rating()
+        .buy_description
+            .buy_topline
+                .buy_headline
+                    h1.buy_title=value.title
+                    h3.buy_subtitle=value.subTitle
+                .buy_rating
+                    |7.8
+            p.buy_text=value.text
+            +price({
+                sale: value.sale,
+                price: value.price
+            })
+            +button(value.buttonText)

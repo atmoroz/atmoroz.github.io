@@ -1,0 +1,20 @@
+.menu {
+  padding-top: 34px;
+  background: #2b3040;
+}
+.menu_list {
+  display: flex;
+  cursor: pointer;
+}
+.menu_item {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #b7bacd;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0 15px 30px;
+  border-bottom: 4px solid transparent;
+}
+.menu_img {
+  text-align: center;
+}

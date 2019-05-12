@@ -1,0 +1,24 @@
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.rating_star {
+  background: url(../img/star.png) no-repeat;
+  width: 19px;
+  height: 18px;
+  margin: 0 3px;
+}
+.rating_star:nth-child(n+2) {
+  background: url(../img/star_gold.png) no-repeat;
+}
+.rating_star:hover {
+  background: url(../img/star_gold.png) no-repeat;
+  cursor: pointer;
+}
+/*
+.rating_star:hover::before,
+.rating_star:hover ~ .rating_star::before {
+    color: #f7bf16;
+    cursor: pointer;
+}*/

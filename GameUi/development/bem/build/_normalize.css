@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+body {
+  font: 400 14px/1.57 'Lato', sans-serif;
+  color: #fff;
+  background-color: #292d3e;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: #BDC3C7;
+  fill-rule: evenodd;
+  opacity: 0.702;
+  stroke: currentColor;
+}
+li.active,
+svg.active {
+  color: #fff;
+  border-color: #fff;
+  fill: #fff;
+}
+section.active_display {
+  display: flex;
+}

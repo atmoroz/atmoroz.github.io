@@ -1,0 +1,21 @@
+include bem/card/card.pug
+include bem/menu/menu.pug
+include bem/information/information.pug
+include bem/rating/rating.pug
+include bem/price/price.pug
+include bem/button/button.pug
+include bem/ratingInfo/ratingInfo.pug
+include bem/buy/buy.pug
+doctype html
+html(lang=ru)
+    head
+        meta(charset="utf-8")
+        title gameUi
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet")
+        link(href="style.css" rel="stylesheet")
+        script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
+
+    body
+        +card()
+        script(type="text/javascript" src="../js/app-jquery.js")

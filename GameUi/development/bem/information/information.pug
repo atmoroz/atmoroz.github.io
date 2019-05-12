@@ -1,0 +1,19 @@
+mixin information(value)
+    section(class=value.className)
+        .information_product
+            .information_img
+                img(src=value.imgUrl)
+            +rating()
+        .information_description
+            .information_topline
+                .information_headline
+                    h1.information_title=value.title
+                    h3.information_subtitle=value.subTitle
+                .information_rating
+                    |7.8
+            p.information_text=value.text
+            +price({
+                sale: value.sale,
+                price: value.price
+            })
+            +button(value.buttonText)

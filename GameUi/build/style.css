@@ -1,0 +1,254 @@
+html {
+  height: 100%;
+}
+body {
+  font: 400 14px/1.57 'Lato', sans-serif;
+  color: #fff;
+  background-color: #292d3e;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: #BDC3C7;
+  fill-rule: evenodd;
+  opacity: 0.702;
+  stroke: currentColor;
+}
+li.active,
+svg.active {
+  color: #fff;
+  border-color: #fff;
+  fill: #fff;
+}
+section.active_display {
+  display: flex;
+}
+.card {
+  width: 600px;
+  background: #212534;
+}
+.menu {
+  padding-top: 34px;
+  background: #2b3040;
+}
+.menu_list {
+  display: flex;
+  cursor: pointer;
+}
+.menu_item {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #b7bacd;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0 15px 30px;
+  border-bottom: 4px solid transparent;
+}
+.menu_img {
+  text-align: center;
+}
+.information {
+  display: none;
+  padding: 60px 42px 60px 0;
+}
+.information_product {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  text-align: center;
+}
+.information_topline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.information_rating {
+  font-size: 20px;
+  color: #aaadbb;
+  padding: 18px;
+  border: 2px solid #aaadbb;
+  border-radius: 50%;
+  position: relative;
+}
+.information_rating::after {
+  content: '';
+  position: absolute;
+  background: url(../img/elipse.png);
+  width: 63px;
+  height: 73px;
+  top: -2px;
+  right: -5px;
+}
+.information_title {
+  font-size: 32px;
+  line-height: 0.625;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.information_subtitle {
+  font-size: 14px;
+}
+.information_text {
+  color: #b7bacd;
+  margin-bottom: 54px;
+}
+.information_img {
+  margin-bottom: 20px;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.rating_star {
+  background: url(../img/star.png) no-repeat;
+  width: 19px;
+  height: 18px;
+  margin: 0 3px;
+}
+.rating_star:nth-child(n+2) {
+  background: url(../img/star_gold.png) no-repeat;
+}
+.rating_star:hover {
+  background: url(../img/star_gold.png) no-repeat;
+  cursor: pointer;
+}
+/*
+.rating_star:hover::before,
+.rating_star:hover ~ .rating_star::before {
+    color: #f7bf16;
+    cursor: pointer;
+}*/
+.price_sale {
+  font: 700 12px/1.6 'Lato', sans-serif;
+  color: #fedc3f;
+  text-transform: uppercase;
+}
+.price_price {
+  font-size: 32px;
+  line-height: 1.2;
+}
+.button {
+  text-align: right;
+  margin-top: -34px;
+  margin-bottom: 20px;
+}
+.button_button {
+  color: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  background-color: #13E28D;
+  padding: 18px 37px;
+  -webkit-border-radius: 3px;
+}
+.ratingInfo {
+  display: none;
+  padding: 60px 42px 60px 0;
+}
+.ratingInfo_product {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  text-align: center;
+}
+.ratingInfo_topline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.ratingInfo_rating {
+  font-size: 20px;
+  color: #aaadbb;
+  padding: 18px;
+  border: 2px solid #aaadbb;
+  border-radius: 50%;
+  position: relative;
+}
+.ratingInfo_rating::after {
+  content: '';
+  position: absolute;
+  background: url(../img/elipse.png);
+  width: 63px;
+  height: 73px;
+  top: -2px;
+  right: -5px;
+}
+.ratingInfo_title {
+  font-size: 32px;
+  line-height: 0.625;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.ratingInfo_subtitle {
+  font-size: 14px;
+}
+.ratingInfo_text {
+  color: #b7bacd;
+  margin-bottom: 54px;
+}
+.ratingInfo_img {
+  margin-bottom: 20px;
+}
+.buy {
+  display: none;
+  padding: 60px 42px 60px 0;
+}
+.buy_product {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  text-align: center;
+}
+.buy_topline {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.buy_rating {
+  font-size: 20px;
+  color: #aaadbb;
+  padding: 18px;
+  border: 2px solid #aaadbb;
+  border-radius: 50%;
+  position: relative;
+}
+.buy_rating::after {
+  content: '';
+  position: absolute;
+  background: url(../img/elipse.png);
+  width: 63px;
+  height: 73px;
+  top: -2px;
+  right: -5px;
+}
+.buy_title {
+  font-size: 32px;
+  line-height: 0.625;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.buy_subtitle {
+  font-size: 14px;
+}
+.buy_text {
+  color: #b7bacd;
+  margin-bottom: 54px;
+}
+.buy_img {
+  margin-bottom: 20px;
+}

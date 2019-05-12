@@ -1,0 +1,49 @@
+.ratingInfo {
+    display: none;
+    padding: 60px 42px 60px 0;
+    &_product {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        text-align: center;
+    }
+    &_topline {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    &_rating {
+        font-size: 20px;
+        color: #aaadbb;
+        padding: 18px;
+        border: 2px solid #aaadbb;
+        border-radius: 50%;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            background: url(../img/elipse.png);
+            width: 63px;
+            height: 73px;
+            top: -2px;
+            right: -5px;
+        }
+    }
+    &_title {
+        font-size: 32px;
+        line-height: 0.625;
+        margin-bottom: 16px;
+        padding-top: 16px;
+    }
+    &_subtitle {
+        font-size: 14px;
+    }
+    &_text {
+        color: #b7bacd;
+        margin-bottom: 54px;
+    }
+    &_img {
+        margin-bottom: 20px;
+    }
+}
