@@ -3,22 +3,14 @@ mixin menu(menuObject)
         ul.menu_list
             each val,index in menuObject
                 if index == 0
-                    li.menu_item.active(class=val.className)
+                    li.menu_item.active(class=val.className id=val.id)
                         .menu_img
-                            if index == 0
-                                svg.information_icons.active
-                                    path( d=val.path)
-                            else
-                                svg.information_icons
-                                    path( d=val.path)
+                            svg.information_icons
+                                path( d=val.path)
                         = val.menuName
                 else
-                    li.menu_item(class=val.className)
+                    li.menu_item(class=val.className id=val.id)
                         .menu_img
-                            if index == 0
-                                svg.information_icons.active
-                                    path( d=val.path)
-                            else
-                                svg.information_icons
-                                    path( d=val.path)
+                            svg.information_icons
+                                path( d=val.path)
                         = val.menuName

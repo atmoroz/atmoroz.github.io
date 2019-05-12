@@ -13,21 +13,19 @@ body {
   justify-content: center;
   height: 100%;
 }
+a {
+  text-decoration: none;
+}
 svg {
   width: 24px;
   height: 24px;
   cursor: pointer;
-  fill: #BDC3C7;
+  fill: currentColor;
   fill-rule: evenodd;
-  opacity: 0.702;
-  stroke: currentColor;
 }
-li.active,
-svg.active {
+li.active {
   color: #fff;
   border-color: #fff;
-  fill: #fff;
-  opacity: 1;
 }
 section.active_display {
   display: flex;
