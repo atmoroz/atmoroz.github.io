@@ -27,6 +27,7 @@ svg.active {
   color: #fff;
   border-color: #fff;
   fill: #fff;
+  opacity: 1;
 }
 section.active_display {
   display: flex;
