@@ -1,26 +1,17 @@
+const INFORMATIONICONS = $('.information_icons');
 $('.menu')
     .on('click', '.menu_item', function() {
         $(this)
         .addClass("active")
         .siblings().removeClass("active");
 
-        $('.information_icons').removeClass("active");
-        $(this).find($('.information_icons')).addClass("active");
+        INFORMATIONICONS.removeClass("active");
+        $(this).find(INFORMATIONICONS).addClass("active");
 
-            if( $(this).hasClass("menu_info") ){
-                $(".information").addClass("active_display");
-            }else {
-                $(".information").removeClass("active_display");
-            }
-            if( $(this).hasClass("menu_rating") ) {
-                $(".ratingInfo").addClass("active_display");
-            }else {
-                $(".ratingInfo").removeClass("active_display");
-            }
-            if( $(this).hasClass("menu_buy") ) {
-                $(".buy").addClass("active_display");
-            }else {
-                $(".buy").removeClass("active_display");
-            }
-        
+        let tabs = ($(this).attr("id")).replace('#','.');
+        //активируем нужный нам таб (привязываемся к id) после удаляем соседей
+        $(tabs)
+        .addClass("active_display")
+        .siblings()
+        .removeClass("active_display");
     })

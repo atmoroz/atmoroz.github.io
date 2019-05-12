@@ -13,9 +13,6 @@ body {
   justify-content: center;
   height: 100%;
 }
-a {
-  text-decoration: none;
-}
 svg {
   width: 24px;
   height: 24px;
