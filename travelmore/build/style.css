@@ -117,6 +117,7 @@ input[placeholder] {
   width: 100%;
   padding: 27px 0;
   background: #5474fd;
+  z-index: 1;
 }
 .menu_main {
   display: flex;
