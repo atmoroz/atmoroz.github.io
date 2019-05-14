@@ -1,0 +1,9 @@
+body {
+  font: 400 16px/1.625 'Josefin Sans', sans-serif;
+  color: #e8e8e8;
+}
+.h1 {
+  font: 700 48px/26px 'Josefin Sans', sans-serif;
+  color: #fff;
+  letter-spacing: 0.1em;
+}

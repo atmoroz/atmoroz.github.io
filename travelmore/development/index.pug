@@ -1,0 +1,43 @@
+include bem/header/header.pug
+include bem/form/form.pug
+include bem/button/button.pug
+include bem/menu/menu.pug
+include bem/advantages/advantages.pug
+include bem/title/title.pug
+include bem/text/text.pug
+include bem/choose/choose.pug
+include bem/country/country.pug
+include bem/tourist/tourist.pug
+include bem/footer/footer.pug
+include bem/brand/brand.pug
+include bem/social/social.pug
+doctype html
+html(lang=ru)
+    head
+        meta(charset="utf-8")
+        title travel - more
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700" rel="stylesheet")
+        link(rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css")
+        link(href="style.css" rel="stylesheet")
+    body
+        +header()
+        +menu()
+        +advantages()
+        +choose()
+        +country({
+            modifier: '',
+            country: 'Spain',
+            title: 'Grand Spain Madrid',
+            text: 'But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system',
+            buttonText: 'Book Now'
+        })
+        +country({
+            modifier: 'reverse',
+            country: 'Spain',
+            title: 'Grand Spain Madrid',
+            text: 'But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system',
+            buttonText: 'Book Now'
+        })
+        +tourist()
+        +footer()

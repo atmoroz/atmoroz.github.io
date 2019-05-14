@@ -1,0 +1,29 @@
+.advantages {
+  background-image: url('../img/advantages_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 130px;
+}
+.advantages_content {
+  display: flex;
+}
+.advantages_description {
+  padding-top: 207px;
+  width: 540px;
+  flex-shrink: 0;
+}
+.advantages_button {
+  padding-top: 16px;
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+}
+.advantages_img {
+  padding-top: 120px;
+  text-align: right;
+  font-size: 0;
+}
+.advantages_img__river {
+  padding-right: 126px;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,22 @@
+.header {
+  background-image: url('../img/header_bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.header_content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header_scroll {
+  margin: auto 0;
+}
+.header_scroll__text {
+  display: block;
+  font: 400 14px/26px 'Josefin Sans', sans-serif;
+  letter-spacing: 0.2em;
+  color: #fff;
+}

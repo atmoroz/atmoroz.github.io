@@ -1,0 +1,18 @@
+.text {
+  font: 400 16px/26px 'Josefin Sans', sans-serif;
+  color: #e8e8e8;
+  letter-spacing: 0.03em;
+  margin-bottom: 27px;
+}
+.text__country {
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+.text__tourist {
+  display: inline;
+  letter-spacing: -0.06em;
+}
+.text__footer {
+  margin-bottom: 22px;
+}

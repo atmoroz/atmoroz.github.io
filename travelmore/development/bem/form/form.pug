@@ -1,0 +1,12 @@
+mixin form()
+    form.form.form_search
+        p.form_item
+            input(type="search" pattern="[A-Za-zА-Яа-яЁё]{3,255}" class="form_input" placeholder="Search Your Travel Destination")
+        .form__button
+            +button({
+                className: 'search',
+                text: 'search'
+            })
+            .form_loupe
+                svg(xmlns='http://www.w3.org/2000/svg', width='20', height='22')
+                    path(fill-rule='evenodd', fill='#FFF', d='M20 19.98l-1.05 1.05-5.77-5.79c-.33.3-.7.57-1.1.8a8.5 8.5 0 0 1-2.6.97 7.72 7.72 0 0 1-4.57-.52A7.99 7.99 0 0 1 0 9.06a8.04 8.04 0 0 1 4.9-7.45A8 8 0 0 1 8.05.98a7.87 7.87 0 0 1 5.67 2.35 8.4 8.4 0 0 1 1.74 2.56 7.8 7.8 0 0 1 .52 4.6 7.31 7.31 0 0 1-.97 2.6c-.23.4-.5.77-.8 1.1L20 19.99zM.84 9.06a7.1 7.1 0 0 0 2.09 5.09 7.39 7.39 0 0 0 2.31 1.57 6.97 6.97 0 0 0 5.6 0 7.47 7.47 0 0 0 3.85-3.87 7.02 7.02 0 0 0 0-5.6 7.43 7.43 0 0 0-3.85-3.87 7.25 7.25 0 0 0-7.9 1.55 7.09 7.09 0 0 0-2.1 5.13z')

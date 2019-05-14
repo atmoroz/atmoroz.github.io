@@ -1,0 +1,39 @@
+.choose {
+    background: #333;
+    padding: 89px 0 114px;
+    &_content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    &_icon {
+        margin-bottom: 28px;
+    }
+    &_select {
+        position: relative;
+        margin: 0 40px;
+        &::after {
+            content: '';
+            background-image: url(../img/dotted.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            display: block;
+            width: 367px;
+            height: 58px;
+            bottom: 118px;
+            left: 96px;
+        }
+            &::before {
+            content: '';
+            background-image: url(../img/dotted.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            display: block;
+            width: 367px;
+            height: 58px;
+            bottom: 118px;
+            right: 122px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.tourist {
+  background-image: url('../img/tourist_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 125px 0 200px;
+}
+.tourist_content {
+  display: flex;
+}
+.tourist_story {
+  background: #333333;
+  padding: 46px 50px 20px 54px;
+  clear: both;
+}
+.tourist_subtitle {
+  margin-bottom: 38px;
+}
+.tourist__quote {
+  font-size: 21px;
+  color: #5474fd;
+  position: relative;
+  top: -12px;
+  left: 2px;
+  margin-right: 5px;
+}
+.tourist_image {
+  width: 445px;
+  font-size: 0;
+  flex-shrink: 0;
+}

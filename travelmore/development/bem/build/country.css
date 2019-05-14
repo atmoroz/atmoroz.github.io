@@ -1,0 +1,31 @@
+.country {
+  background-image: url('../img/country_hotel.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 230px 0 100px;
+  color: #e8e8e8;
+}
+.country__reverse {
+  background-image: url('../img/country_sea.jpg');
+}
+.country__reverse .country_content {
+  display: flex;
+  justify-content: flex-end;
+}
+.country_title {
+  font: 400 20px/26px 'Josefin Sans', sans-serif;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.country_description {
+  width: 540px;
+  background: rgba(45, 38, 37, 0.9);
+  padding: 47px 27px;
+  box-sizing: border-box;
+}
+.country_button {
+  padding-top: 16px;
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+}

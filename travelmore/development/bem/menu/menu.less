@@ -1,0 +1,30 @@
+.menu {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 27px 0;
+    background: #5474fd;
+    &_main {
+        display: flex;
+        justify-content: space-between;
+    }
+    &_list {
+        display: flex;
+    }
+    &_item {
+        font: 400 14px/26px 'Aleo', serif;
+        letter-spacing: .01em;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 21px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

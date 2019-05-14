@@ -1,0 +1,12 @@
+mixin country(param)
+    section(class=(param.modifier ? 'country layout country__' + param.modifier : 'country layout'))
+        .country_content.layout_section
+            .country_description
+                +text(param.country, 'country')
+                h4.country_title= param.title
+                +text(param.text)
+                .country_button
+                    +button({
+                            className: 'button',
+                            text: param.buttonText
+                    })

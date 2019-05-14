@@ -1,0 +1,11 @@
+- var navMenu = ['Who We Are','What We Do', 'Travel With Us', 'Contact Us'];
+mixin menu()
+    section.menu.layout
+        .menu_main.layout_section
+            +brand()
+            nav.menu_nav
+                ul.menu_list
+                    each value in navMenu
+                        li.menu_item
+                            a.menu_list__link
+                                =value

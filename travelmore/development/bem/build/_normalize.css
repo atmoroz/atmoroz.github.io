@@ -1,0 +1,33 @@
+body {
+  font: 400 16px/1.625 'Josefin Sans', sans-serif;
+  color: #e8e8e8;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.layout {
+  min-width: 1110px;
+}
+.layout_section {
+  width: 1110px;
+  margin: 0 auto;
+}
+.h3 {
+  font: 400 22px/1.18 'Josefin Sans', sans-serif;
+  color: #fff;
+  letter-spacing: 0.24em;
+  margin-bottom: 48px;
+}
+.h4 {
+  font: 400 20px/26px 'Josefin Sans', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+input[placeholder] {
+  font: 400 14px/26px 'Josefin Sans', sans-serif;
+  color: #999999;
+}
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}

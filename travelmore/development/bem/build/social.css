@@ -1,0 +1,12 @@
+.social_content {
+  width: 166px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.social_link {
+  color: #e8e8e8;
+}
+.social_link:hover {
+  color: #5474fd;
+}
