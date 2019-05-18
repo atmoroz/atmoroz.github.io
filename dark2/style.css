@@ -1,0 +1,30 @@
+.circle_in{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient( lightgrey 10px, grey 20px);
+    border-radius: 50%;
+    border: 1px solid grey;
+    z-index: 3;
+}
+.circle_out{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #FFF;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    z-index: 2;
+}
+.circle{
+    position: relative;
+    display: block;
+    width: 170px;
+    height: 170px;
+    background: linear-gradient(to top lightgrey 50%, white 50%);
+    border: 1px solid lightgrey;
+    z-index: 1;
+}
+..circle_in:active{
+    background: radial-gradient( green 10px, grey 20px);
+}
