@@ -1,0 +1,26 @@
+mixin banner()
+    section.banner
+        .banner_item.layout
+            .banner_content
+                .banner_title
+                    h2 Virginia Travel For Kids
+                .banner_button
+                    +button({
+                        text: 'Button text',
+                        modificatorName: 'download'
+                    })
+                    +button({
+                        text: 'Button text',
+                        modificatorName: 'cloud'
+                    })
+                    +button({
+                        text: 'Watch video',
+                        modificatorName: 'video'
+                    })
+            picture
+                source(srcset="../images/Man_i.png" media="(max-width: 768px)")
+                source(srcset="../images/Man@2x_r.png")
+                img(class="banner_img" srcset="../images/Man@2x_r.png" alt="My default image")
+            +timer()
+
+

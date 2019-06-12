@@ -1,0 +1,68 @@
+mixin step()
+    section.step
+        .step_wrapper
+            .step_item
+                .step_content
+                    .step_progress
+                        p.step_progress__static S1 2018
+                    .step__listcontent__mindevise 
+                        ul.step_list.step_list__static
+                            each val in ['Lorem ipsum dolor sit amet', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor incididunt', 'Ut enim ad minim veniam']
+                                li(class="step_scills")=val
+            .step_item__reverse
+                .step_content__reverse
+                    .step_progress
+                        p.step_progress__reverse S2 2018
+                    .step__listcontent
+                        ul.step_list
+                            each val in ['Consectetur adipiscing elit', 'Sed do eiusmod tempor incididunt', 'Ut enim ad minim veniam']
+                                li(class="step_scills")=val
+            .step_item
+                .step_content
+                    .step_progress
+                        p.step_progress__static S3 2018
+                    .step__listcontent__mindevise
+                        ul.step_list.step_list__static
+                            each val in ['Lorem ipsum dolor sit amet', 'Ut enim ad minim veniam']
+                                    li(class="step_scills")=val
+            .step_item__reverse
+                .step_content__reverse
+                    .step_progress
+                        p.step_progress__reverse S1 2019
+                    .step__listcontent
+                        ul.step_list
+                            each val in ['Lorem ipsum dolor sit amet', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor incididunt', 'Ut enim ad minim veniam']
+                                li(class="step_scills")=val
+            .step_item
+                .step_content
+                    .step_progress
+                        p.step_progress__static S2 2019
+                    .step__listcontent__mindevise
+                        ul.step_list.step_list__static
+                            each val in ['Lorem ipsum dolor sit amet', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.']
+                                    li(class="step_scills")=val
+            .step_item__reverse
+                .step_content__reverse
+                    .step_progress
+                        p.step_progress__reverse S3 2019
+                    .step__listcontent
+                        ul.step_list
+                            each val in ['Lorem ipsum dolor sit amet', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor incididunt', 'Ut enim ad minim veniam']
+                                li(class="step_scills")=val
+            .step_item
+                .step_content
+                    .step_progress
+                        p.step_progress__static S4 2019
+                    .step__listcontent__mindevise
+                        ul.step_list.step_list__static
+                            each val in ['Lorem ipsum dolor sit amet', 'Ut enim ad minim veniam']
+                                    li(class="step_scills")=val
+            .step_logo
+                img(src="images/step_logo.png" alt="image")
+            .step_date
+                | 2020
+            ul.step_finish
+                li.step_scills
+                    | Lorem ipsum dolor sit amet
+                li.step_scills
+                    | Consectetur adipiscing elit

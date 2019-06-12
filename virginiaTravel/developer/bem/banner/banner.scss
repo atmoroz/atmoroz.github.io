@@ -1,0 +1,55 @@
+.banner {
+    background-image: url('../images/Car@2x_i.png');
+    background-size: cover;
+    background-position: center center;
+    padding: 218px 0 250px;
+    position: relative;
+    margin-bottom: 48px;
+    @media(max-width: 1024px) {
+        padding-bottom: 625px
+    }
+    @media(max-width: 768px) {
+        background-image: url('../images/Car_i.png');
+        padding-bottom: 300px;
+        padding-top: 250px;
+    }
+    &_content {
+        margin-left: 84px;
+        position: relative;
+        z-index: 2;
+        @media(max-width: 1024px) {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &_title {
+        position: relative;
+        margin-bottom: 57px;
+        z-index: 1;
+        @media(max-width: 768px) {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+    }
+    &_button {
+        display: flex;
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    &_img {
+        max-width: 463px;
+        height: auto;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, rgba(220, 223, 229, .3) 30%, rgba(220, 223, 229, .3) 30%, rgba(192, 198, 208, .3) 70%, rgba(220, 223, 229, .3) 70%);
+        @media(max-width: 1024px) {
+            background: transparent;
+        }
+
+    }
+}

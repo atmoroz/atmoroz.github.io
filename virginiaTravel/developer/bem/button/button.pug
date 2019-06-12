@@ -1,0 +1,14 @@
+mixin button(prop)
+
+    if prop.modificatorName == 'download'
+        .button
+            a.button_link(class="button_link__"+prop.modificatorName href="#")=prop.text
+    else if prop.modificatorName == 'cloud'
+        .button
+            a.button_link(class="button__long button_link__"+prop.modificatorName href="#")=prop.text
+    else if prop.modificatorName == 'video'
+        .button
+            a.button_link(class="button_link__"+prop.modificatorName href="#")=prop.text
+    else
+        .button
+            a(class="button_link__"+prop.modificatorName href="#")=prop.text

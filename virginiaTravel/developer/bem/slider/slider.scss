@@ -1,0 +1,125 @@
+.slider {
+    font: 400 16px/24px 'cera';
+    background-image: url('../images/guitarist.png');
+    background-color: #000221; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 56px;
+    @media(max-width: 550px) {
+        background-size: cover;
+    }
+    &_item {
+        position: relative;
+        padding-top: 69px;
+        padding-bottom: 25px;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../images/path_w.png');
+            right: 0;
+            top: 0;
+            width: 538px;
+            height: 491px;
+            @media(max-width: 1024px) {
+                width: 343px;
+                padding-top: 47px;
+            }
+            @media(max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    &_wrapper {
+        position: relative;
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: 140px;
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../images/shape.png');
+            width: 140px;
+            height: 94px;
+            top: 0;
+            left: 150px;
+            opacity: .1;
+        }
+        @media(max-width: 768px) {
+            margin-right: auto;
+        }
+    }
+    &_count {
+        font-family: 'brownbold';
+        font-weight: 700;
+        position: absolute;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        bottom: -12px;
+        right: 192px;
+        color: rgba(255, 255, 255, .5);
+        &__active {
+            color: rgba(255, 255, 255, 1);
+        }
+        @media(max-width: 1024px) {
+            right: 24px;
+        }
+        @media(max-width: 1005px) {
+            right: -3px;
+        }
+        @media(max-width: 942px) {
+            right: -4px;
+        }
+        @media(max-width: 768px) {
+            right: 124px;
+        }
+    }
+    &_content {
+        max-width: 556px;
+        margin-left: auto;
+        margin-right: 347px;
+        @media(max-width: 1024px) {
+            max-width: 600px;
+            margin: auto;
+            margin-right: 170px;
+        }
+        @media(max-width: 768px) {
+            max-width: 505px;
+            margin: 0 auto;
+            padding-left: 10px;
+        }
+    }
+    &_text {
+        margin-bottom: 35px;
+        @media(max-width: 1024px) {
+            margin-bottom: 10px;
+            padding: 0 15px;
+        }
+    }
+    &_captions {
+        display: flex;
+        align-items: center;
+        @media(max-width: 1024px) {
+            padding-top: 15px;
+            margin-bottom: -15px;
+        }
+        @media(max-width: 768px) {
+            padding-top: 15px;
+            margin-bottom: 0;
+        }
+    }
+    &_logo {
+        padding: 2px;
+        margin-right: 26px;
+        margin-bottom: 11px;
+    }
+    &_author {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &_profession,
+    &_organization {
+        opacity: .73;
+    }
+}

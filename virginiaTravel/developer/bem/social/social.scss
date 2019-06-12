@@ -1,0 +1,46 @@
+.social {
+    border-top: 2px solid #dde3eb;
+    &_item {
+        display: flex;
+        align-items: center;
+        padding: 28px 0 33px 0;
+        max-width: 1120px;
+        margin: 0 auto;
+        @media(max-width: 768px) {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    &_logo {
+        @media(max-width: 1024px) {
+            padding-left: 15px;
+        }
+        @media(max-width: 768px) {
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+    }
+    &_social {
+        margin: 0 auto;
+        padding-right: 110px;
+        @media(max-width: 1024px) {
+            padding-right: 0;
+        }
+    }
+    &_list {
+        display: flex;
+    }
+    &_icons{
+        font-size: 18px;
+        cursor: pointer;
+        margin: 0 12px;
+        &__link {
+            color: #9babb8;
+            &:hover {
+                color: #000221;
+                transition: color .3s;
+            }
+        }
+    }
+}

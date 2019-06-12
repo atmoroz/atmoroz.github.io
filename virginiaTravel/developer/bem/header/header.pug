@@ -1,0 +1,17 @@
+mixin header()
+    header.header
+        .header_item.layout
+            nav.header_nav
+                .header_logo
+                    +logo()
+                .header_section
+                    a.header_openTabs
+                        i(class="fas fa-align-justify")
+                    .header_menu.header_menu__open
+                        a.header_closeTabs
+                            <i class="fas fa-times"></i>
+                        +menu()
+                        +button({
+                            text: 'button text',
+                            modificatorName: 'header',
+                        })

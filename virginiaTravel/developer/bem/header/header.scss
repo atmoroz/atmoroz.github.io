@@ -1,0 +1,71 @@
+.header {
+    position: relative;
+    &_item {
+        padding: 33px 0;
+        @media(max-width: 1024px) {
+            padding: 20px;
+        }
+        @media(max-width: 768px) {
+            padding-top: 30px;
+        }
+    }
+    &_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_logo {
+        &::before {
+            content: '';
+            position: absolute;
+            background: url('../images/form_top.png');
+            width: 119px;
+            height: 144px;
+            top: 0;
+            left: -53px;
+            z-index: 1;
+        }
+    }
+    &_section {
+        display: flex;
+        color: #413281;
+    }
+    &_menu {
+        display: flex;
+        align-items: center;
+        @media(max-width: 768px) {
+            display: none;
+        }
+        &__open {
+            @media(max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    &_openTabs,
+    &_closeTabs {
+            display: none;
+            &:hover {
+            color: #310dcc;
+            transition: color .2s;
+        }
+        @media(max-width: 768px) {
+            display: inline-block;
+            align-self: flex-start;
+        }
+    }
+}
+._headerMenu {
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        min-width: 150px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        background: #fff;
+        z-index: 5;
+    }
+}
