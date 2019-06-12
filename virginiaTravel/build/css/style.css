@@ -344,8 +344,12 @@ h4 {
       color: #fff;
       background: #413281;
       border-color: #413281;
-      -webkit-transition: color .2s, background .2s, border-color .2s;
-      transition: color .2s, background .2s, border-color .2s; }
+      -webkit-transition: color .2s,
+ background .2s,
+ border-color .2s;
+      transition: color .2s,
+ background .2s,
+ border-color .2s; }
     .button_link__download::before, .button_link__cloud::before, .button_link__video::before {
       position: relative;
       font-family: "Font Awesome 5 Free";
@@ -916,6 +920,8 @@ h4 {
 .footer_copiryght {
   text-align: center;
   margin-right: 52px; }
+  @media(max-width: 768px) {
+    .footer_copiryght { margin-right: 0; } }
   .footer_copiryght > a {
     color: rgba(0, 18, 51, 0.6); }
 
