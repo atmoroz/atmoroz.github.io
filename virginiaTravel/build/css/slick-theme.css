@@ -43,14 +43,14 @@
 
 }
 .slick-next {
-    background: url('images/button_static.png');
+    background: url('../images/button_static.png');
 }
 .slick-prev {
-    background: url('images/button_static.png');
+    background: url('../images/button_static.png');
 }
 .slick-prev:hover,
 .slick-next:hover {
-    background: url('images/button_hover.png');
+    background: url('../images/button_hover.png');
 }
 
 .slick-prev:hover:before,
@@ -113,7 +113,7 @@
 {
     content: '';
     position: absolute;
-    background: url('images/arrow_prev.png');
+    background: url('../images/arrow_prev.png');
     width: 17px;
     height: 13px;
     opacity: 1;
@@ -123,7 +123,7 @@
 [dir='rtl'] .slick-prev:before
 {
     content: '';
-    background: url('images/arrow_next.png');
+    background: url('../images/arrow_next.png');
 }
 
 .slick-next
@@ -160,7 +160,7 @@
 {
     content: '';
     position: absolute;
-    background: url('images/arrow_next.png');
+    background: url('../images/arrow_next.png');
     width: 17px;
     height: 13px;
     opacity: 1;
