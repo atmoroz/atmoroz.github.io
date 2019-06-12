@@ -23,7 +23,7 @@ function load() {
     });
 
     //по умолчанию подсветка кнопки
-    document.querySelector('.slick-next').style.background = "url('images/button_hover.png')";
+    document.querySelector('.slick-next').style.background = "url('../images/button_hover.png')";
 
     /*
         Собыия click на кнопки
@@ -125,13 +125,13 @@ function showSlide() {
         Задаем состояние кнопкам в зависимости от номера текущего слайда
     */
     if(indexCurrent == '0') {
-        document.querySelector('.slick-next').style.background = "url('images/button_hover.png')";
+        document.querySelector('.slick-next').style.background = "url('../images/button_hover.png')";
     }else {
-        document.querySelector('.slick-next').style.background = "url('images/button_static.png')";
+        document.querySelector('.slick-next').style.background = "url('../images/button_static.png')";
     }
     if(+indexCurrent == +allSlides-1) {
-        document.querySelector('.slick-prev').style.background = "url('images/button_hover.png')";
+        document.querySelector('.slick-prev').style.background = "url('../images/button_hover.png')";
     } else {
-        document.querySelector('.slick-prev').style.background = "url('images/button_static.png')";
+        document.querySelector('.slick-prev').style.background = "url('../images/button_static.png')";
     }
 };
