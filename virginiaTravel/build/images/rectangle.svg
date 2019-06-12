@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="623px" height="208px" viewBox="0 0 623 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing" transform="translate(-743.000000, -436.000000)" fill="#2998CC" fill-rule="nonzero">
+            <g id="1-Welcome-screen" transform="translate(0.000000, 76.000000)">
+                <g id="OFF_Countdown" transform="translate(743.000000, 360.000000)">
+                    <polygon id="Rectangle-3" transform="translate(311.500000, 104.000000) scale(-1, -1) translate(-311.500000, -104.000000) " points="-9.09494702e-13 -4.54747351e-13 623 -4.54747351e-13 431 208 -9.09494702e-13 208"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
