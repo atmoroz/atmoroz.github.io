@@ -82,28 +82,20 @@
 
 .slick-prev
 {
-    right: 229px;
+    right: -114px;
 }
 @media(max-width: 1024px) {
     .slick-prev {
-        right: 65px;
+        right: -112px;
     }
 }
-@media(max-width: 1005px) {
-    .slick-prev {
-        right: 31px;
-    }
-}
-@media(max-width: 942px) {
-    .slick-prev {
-        right: 33px;
-    }
-}
+
 @media(max-width: 768px) {
     .slick-prev{
-        right: 150px;
+        right: 167px;
+        bottom: -24px;
     }
-}
+} 
 [dir='rtl'] .slick-prev
 {
     right: 0;
@@ -113,7 +105,7 @@
 {
     content: '';
     position: absolute;
-    background: url('../images/arrow_prev.png');
+    background: url(../images/arrow_prev.png);
     width: 17px;
     height: 13px;
     opacity: 1;
@@ -123,31 +115,22 @@
 [dir='rtl'] .slick-prev:before
 {
     content: '';
-    background: url('../images/arrow_next.png');
+    background: url(../images/arrow_next.png);
 }
 
 .slick-next
 {
-    right: 59px;
+    right: -296px;
 }
-@media(max-width: 1024px) {
+ @media(max-width: 1024px) {
     .slick-next {
-        right: -110px;
-    }
-}
-@media(max-width: 1005px) {
-    .slick-next {
-        right: -134px;
-    }
-}
-@media(max-width: 942px) {
-    .slick-next {
-        right: -138px;
+        right: -284px;
     }
 }
 @media(max-width: 768px) {
     .slick-next {
         right: 0;
+        bottom: -24px;
     }
 }
 
@@ -160,7 +143,7 @@
 {
     content: '';
     position: absolute;
-    background: url('../images/arrow_next.png');
+    background: url(../images/arrow_next.png);
     width: 17px;
     height: 13px;
     opacity: 1;

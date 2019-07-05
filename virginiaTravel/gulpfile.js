@@ -44,6 +44,18 @@ gulp.task('sass', function buildHTML() {
         stream:true
   }));
 });
+
+gulp.task('icons', function() {
+    return gulp.src([
+            'node_modules/@fortawesome/fontawesome-free/**',
+            '!node_modules/@fortawesome/fontawesome-free/**/*.map',
+            '!node_modules/@fortawesome/fontawesome-free/.npmignore',
+            '!node_modules/@fortawesome/fontawesome-free/*.txt',
+            '!node_modules/@fortawesome/fontawesome-free/*.md',
+            '!node_modules/@fortawesome/fontawesome-free/*.json'
+        ])
+        .pipe(gulp.dest('build/libs/webfonts/'));
+});
 // gulp.task('fonts', function() {
 //   return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
 //     .pipe(gulp.dest('build/fonts'))
@@ -51,6 +63,7 @@ gulp.task('sass', function buildHTML() {
 gulp.task('watch', function() {
   gulp.watch('developer/**/*.pug', gulp.series('pug'))
   gulp.watch('developer/**/*.scss', gulp.series('sass'))
+  gulp.watch('node_modules/@fortawesome/font-awesome/**.*', gulp.series('icons'))
 });
 
 gulp.task('default', gulp.series(

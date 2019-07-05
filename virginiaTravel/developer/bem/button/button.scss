@@ -32,16 +32,14 @@
         }
         &__download {
             padding: 15px 22px 15px 35px;
-            color: #413281;
-            background: #fff;
         }
         &__download,
         &__cloud,
         &__video {
             &:hover {
-                color: #fff;
-                background: #413281;
-                border-color: #413281;
+                color: #413281;
+                background: #fff;
+                border-color: #fff;
                 transition: color .2s,
                             background .2s,
                             border-color .2s;

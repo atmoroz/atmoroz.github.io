@@ -10,29 +10,31 @@ function load() {
     document.querySelector('.header_closeTabs').addEventListener('click', () => {
         document.querySelector('.header_menu__open').classList.remove('_headerMenu');
     });
-
     /*
     Активация slick slider
     */
     $('._sliderActive').slick({
         dots: false,
-         infinite: true,
-         speed: 500,
-         fade: true,
-         cssEase: 'linear'
+        infinite: false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 
     //по умолчанию подсветка кнопки
-    document.querySelector('.slick-next').style.background = "url('images/button_hover.png')";
+    document.querySelector('.slick-next').style.background = "url('../images/button_hover.png')";
 
+    /*
+        Обратный отсчет даты и времени
+    */
+    timer();
     /*
         Собыия click на кнопки
     */
     document.querySelector('.roadmap').addEventListener('click', checked);
     document.querySelector('.slick-prev').addEventListener('click', showSlide);
     document.querySelector('.slick-next').addEventListener('click', showSlide);
-}
-
+};
 
 /*
     В зависимости от выбранного road step запускаается та или инная ф-ция
@@ -53,60 +55,59 @@ function checkedItem() {
     const TARGET = event.target;
     const CLOSEST_STEP_ITEM = TARGET.closest('.step_item');
 
-    //При выборе активной кнопки удаляем класс active
-    CLOSEST_STEP_ITEM.classList.contains('_active') ? TARGET.closest('.step_item').classList.remove('_active') : false;
-    //При выборе степа удаляем или добавляем класс checked
-    CLOSEST_STEP_ITEM.classList.contains('_checked') ? TARGET.closest('.step_item').classList.remove('_checked') :
-            CLOSEST_STEP_ITEM.classList.add('_checked');
-    // Проверка, что это не крайний элемент
-    if(CLOSEST_STEP_ITEM.previousElementSibling == null && !TARGET.closest('.step_item').nextElementSibling.classList.contains('_checked')) {
-    
-        CLOSEST_STEP_ITEM.nextElementSibling.classList.add('_active');
-        return;
-    }
+    let prevSibling = getPrevSiblings(CLOSEST_STEP_ITEM);
+    let nextSibling = getNextSiblings(CLOSEST_STEP_ITEM);
 
-    if(CLOSEST_STEP_ITEM.classList.contains('_checked')) {
+    prevSibling.forEach(item => { item.classList.add('_checked') });
+    prevSibling.forEach(item => { item.classList.remove('_active') });
 
-        // При нажатии на степ задаем предыдущему степу состояние или active || checked
-        CLOSEST_STEP_ITEM.previousElementSibling == null ? false : 
-            CLOSEST_STEP_ITEM.previousElementSibling.classList.contains('_active') ? CLOSEST_STEP_ITEM.previousElementSibling.classList.remove('_active') : false;
-            
-        CLOSEST_STEP_ITEM.previousElementSibling.classList.contains('_checked') ? false : CLOSEST_STEP_ITEM.previousElementSibling.classList.add('_checked'); // проверяет существует ли предыдущий элемент
+    nextSibling.forEach(item => { item.classList.remove('_checked') });
+    nextSibling.forEach(item => { item.classList.remove('_active') });
 
-
-        CLOSEST_STEP_ITEM.nextElementSibling.classList.contains('_checked') ? false :
-            CLOSEST_STEP_ITEM.nextElementSibling.classList.add('_active');
-    } else {
-        CLOSEST_STEP_ITEM.nextElementSibling.classList.remove('_active');
-    }
+    CLOSEST_STEP_ITEM.classList.contains('_active') ? CLOSEST_STEP_ITEM.classList.remove('_active') : false;
+    CLOSEST_STEP_ITEM.classList.contains('_checked') ? false : CLOSEST_STEP_ITEM.classList.add('_checked')
+    CLOSEST_STEP_ITEM.nextElementSibling.classList.add('_active');
 }
 
 function checkedItemReverse() {
     const TARGET = event.target;
     const CLOSEST_STEP_ITEM_REVERSE = TARGET.closest('.step_item__reverse');
 
-    CLOSEST_STEP_ITEM_REVERSE.classList.contains('_checked') ? TARGET.closest('.step_item__reverse').classList.remove('_checked') :
-        CLOSEST_STEP_ITEM_REVERSE.classList.add('_checked') ;
+    let prevSibling = getPrevSiblings(CLOSEST_STEP_ITEM_REVERSE);
+    let nextSibling = getNextSiblings(CLOSEST_STEP_ITEM_REVERSE);
+    
+    prevSibling.forEach(item => { item.classList.add('_checked') });
+    prevSibling.forEach(item => { item.classList.remove('_active') });
 
-    CLOSEST_STEP_ITEM_REVERSE.classList.contains('_active') ? TARGET.closest('.step_item__reverse').classList.remove('_active') : false;
+    nextSibling.forEach(item => { item.classList.remove('_checked') });
+    nextSibling.forEach(item => { item.classList.remove('_active') });
 
+    CLOSEST_STEP_ITEM_REVERSE.classList.contains('_active') ? CLOSEST_STEP_ITEM_REVERSE.classList.remove('_active') : false;
+    CLOSEST_STEP_ITEM_REVERSE.classList.contains('_checked') ? false : CLOSEST_STEP_ITEM_REVERSE.classList.add('_checked');
+    CLOSEST_STEP_ITEM_REVERSE.nextElementSibling.classList.add('_active');
+};
 
-    if(CLOSEST_STEP_ITEM_REVERSE.previousElementSibling == null) return;
-
-    CLOSEST_STEP_ITEM_REVERSE.previousElementSibling.classList.contains('_active') ? 
-        CLOSEST_STEP_ITEM_REVERSE.previousElementSibling.classList.remove('_active') : false;
-
-    if(CLOSEST_STEP_ITEM_REVERSE.classList.contains('_checked')) {
-
-        CLOSEST_STEP_ITEM_REVERSE.previousElementSibling == null ? false :
-        CLOSEST_STEP_ITEM_REVERSE.previousElementSibling.classList.add('_checked');
-
-        CLOSEST_STEP_ITEM_REVERSE.nextElementSibling.classList.contains('_checked') ? false : 
-            CLOSEST_STEP_ITEM_REVERSE.nextElementSibling.classList.add('_active');
-    } else {
-        CLOSEST_STEP_ITEM_REVERSE.nextElementSibling.classList.remove('_active');
+function getPrevSiblings(elem) {
+    var siblings = [];
+    var sibling = elem;
+    while (sibling.previousSibling) {
+        sibling = sibling.previousSibling;
+        sibling.nodeType == 1 && siblings.push(sibling);
     }
 
+    return siblings;
+};
+
+function getNextSiblings(elem) {
+    var siblings = [];
+    var sibling = elem;
+
+    while (sibling.nextSibling) {
+        sibling = sibling.nextSibling;
+        sibling.nodeType == 1 && siblings.push(sibling);
+    }
+
+    return siblings;
 };
 
 function showSlide() {
@@ -125,13 +126,43 @@ function showSlide() {
         Задаем состояние кнопкам в зависимости от номера текущего слайда
     */
     if(indexCurrent == '0') {
-        document.querySelector('.slick-next').style.background = "url('images/button_hover.png')";
+        document.querySelector('.slick-next').style.background = "url('../images/button_hover.png')";
     }else {
-        document.querySelector('.slick-next').style.background = "url('images/button_static.png')";
+        document.querySelector('.slick-next').style.background = "url('../images/button_static.png')";
     }
     if(+indexCurrent == +allSlides-1) {
-        document.querySelector('.slick-prev').style.background = "url('images/button_hover.png')";
+        document.querySelector('.slick-prev').style.background = "url('../images/button_hover.png')";
     } else {
-        document.querySelector('.slick-prev').style.background = "url('images/button_static.png')";
+        document.querySelector('.slick-prev').style.background = "url('../images/button_static.png')";
     }
 };
+
+function timer() {
+    let d = document.querySelector('.timer_time__day');
+    let h = document.querySelector('.timer_time__hours');
+    let m = document.querySelector('.timer_time__minutes');
+    let s = document.querySelector('.timer_time__seconds');
+    var nowDate = new Date();
+    var achiveDate = new Date(2019,5,22,7,0,0); //Задаем дату, к которой будет осуществляться обратный отсчет
+    //console.log((achiveDate - nowDate));
+    var result = (achiveDate - nowDate)+1000;
+    if (result < 0) {
+        d.innerText = '--';
+        h.innerText = '--';
+        m.innerText = '--';
+        s.innerText = '--';
+        return undefined;
+    }
+    var seconds = Math.floor((result/1000)%60);
+    var minutes = Math.floor((result/1000/60)%60);
+    var hours = Math.floor((result/1000/60/60)%24);
+    var days = Math.floor(result/1000/60/60/24);
+    if (seconds < 10) seconds = '0' + seconds;
+    if (minutes < 10) minutes = '0' + minutes;
+    if (hours < 10) hours = '0' + hours;
+    d.innerText = days;
+    h.innerText = hours;
+    m.innerText = minutes;
+    s.innerText = seconds;
+    setTimeout(timer, 1000);
+}

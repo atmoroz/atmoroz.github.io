@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 56px;
-    @media(max-width: 550px) {
+    @media(max-width: 768px) {
         background-size: cover;
     }
     &_item {
@@ -25,15 +25,15 @@
                 padding-top: 47px;
             }
             @media(max-width: 768px) {
-                display: none;
+                width: 180px;
             }
         }
     }
     &_wrapper {
         position: relative;
-        max-width: 1240px;
+        max-width: 620px;
         margin-left: auto;
-        margin-right: 140px;
+        margin-right: 495px;
         &::after {
             content: '';
             position: absolute;
@@ -41,11 +41,18 @@
             width: 140px;
             height: 94px;
             top: 0;
-            left: 150px;
+            left: -230px;
             opacity: .1;
         }
+        @media(max-width: 1024px) {
+            max-width: 460px;
+            margin-right: 290px;
+        }
         @media(max-width: 768px) {
-            margin-right: auto;
+            position: static;
+            max-width: 460px;
+            width: calc(100% - 90px);
+            margin: 0 auto 0 10px;
         }
     }
     &_count {
@@ -57,41 +64,22 @@
         letter-spacing: .05em;
         text-transform: uppercase;
         bottom: -12px;
-        right: 192px;
+        right: -161px;
         color: rgba(255, 255, 255, .5);
         &__active {
             color: rgba(255, 255, 255, 1);
         }
         @media(max-width: 1024px) {
-            right: 24px;
-        }
-        @media(max-width: 1005px) {
-            right: -3px;
-        }
-        @media(max-width: 942px) {
-            right: -4px;
+            right: -150px;
         }
         @media(max-width: 768px) {
-            right: 124px;
-        }
-    }
-    &_content {
-        max-width: 556px;
-        margin-left: auto;
-        margin-right: 347px;
-        @media(max-width: 1024px) {
-            max-width: 600px;
-            margin: auto;
-            margin-right: 170px;
-        }
-        @media(max-width: 768px) {
-            max-width: 505px;
-            margin: 0 auto;
-            padding-left: 10px;
+            right: 128px;
+            bottom: 11px;
         }
     }
     &_text {
         margin-bottom: 35px;
+        padding-left: 15px;
         @media(max-width: 1024px) {
             margin-bottom: 10px;
             padding: 0 15px;
@@ -106,7 +94,7 @@
         }
         @media(max-width: 768px) {
             padding-top: 15px;
-            margin-bottom: 0;
+            margin-bottom: 25px;
         }
     }
     &_logo {
