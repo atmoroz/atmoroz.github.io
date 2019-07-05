@@ -1,0 +1,93 @@
+
+<!--.form__sex_icon_checked-->
+<!--form__input_input--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>registerForm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="login login_position_center">
+      <div class="login__container">
+        <div class="login__container_wrapper_main">
+          <div class="login__header">
+            <header class="header">
+              <h1 class="header__title">Sign up for FREE!</h1>
+              <div class="header_style_decor"></div>
+            </header>
+          </div>
+          <div class="login__form">
+            <div class="form">
+              <form class="form__form" action="">
+                <div class="form__item">
+                  <div class="form__sex">
+                    <div class="form__input_text">I am</div>
+                    <div class="form__sex_icon form__sex_icon_man"><i class="fa fa-mars" aria-hidden="true"></i></div>
+                    <div class="form__sex_icon form__sex_icon_woman"><i class="fa fa-venus" aria-hidden="true"></i></div>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <div class="form__input">
+                    <div class="form__input_text">
+                      <label for="age">Year of birth</label>
+                    </div>
+                    <select class="form__input_type_select" type="text" name="age"></select>
+                  </div><span class="form__error_message form__error_age">You must be at least 18 year old</span>
+                </div>
+                <div class="form__item">
+                  <div class="form__input">
+                    <div class="form__input_text">
+                      <label for="email">Email</label>
+                    </div>
+                    <input class="form__input_type_input" type="email" name="email"/>
+                  </div><span class="form__error_message form__error_email">Please include an ‘@’ in the email address</span>
+                </div>
+                <div class="form__item">
+                  <div class="form__input">
+                    <div class="form__input_text">
+                      <label for="password">Password</label>
+                    </div>
+                    <input class="form__input_type_input" type="password" name="password"/>
+                  </div><span class="form__error_message form__error_password">This field can't be empty</span>
+                </div>
+                <div class="form__item">
+                  <div class="form__input">
+                    <div class="form__input_text">
+                      <label for="postalCode">Postal Code</label>
+                    </div>
+                    <input class="form__input_type_input" type="text" name="postalCode"/>
+                  </div><span class="form__error_message form__error_postalCode">This field can't be empty</span>
+                </div>
+                <div class="form__item">
+                  <div class="form__info">
+                    <div class="form__location">
+                      <div class="form__location_icons_map"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <div class="form__location_text">
+                           E.g. Berlin or 10432</div>
+                      </div>
+                    </div>
+                    <div class="form__questions">
+                      <div class="form__questions_icons_questions"><i class="fa fa-question-circle-o" aria-hidden="true"></i></div>
+                    </div>
+                  </div><span class="form__info_message form__info_questions">We don’t use postal codes to cantact members directly</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="login__container_wrapper_footer">
+          <div class="login__footer">
+            <footer class="footer"><a class="footer__button" href="">REGISTER NOW!</a>
+              <div class="footer__text">By clicking the button above you agree to our <a class="footer__link" href="">Terms of Use </a>and <a class="footer__link" href="">Privacy Policy </a>including use of cookies.</div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

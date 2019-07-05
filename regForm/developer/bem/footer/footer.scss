@@ -1,0 +1,31 @@
+@import '../normalize/normalize.scss';
+.footer {
+    background: #eeeeee;
+    &__button {
+            display: block;
+            text-align: center;
+            font: $font_main;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #ffffff;
+            background-color: $color_main;
+            padding: 5px 0;
+            line-height: 30px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            &:hover {
+                background-color: #f5aa4e;
+                transition: background-color .3s;
+            }
+    }
+    &__text {
+        color: $color_gray;
+        text-align: center;
+        font-size: 12px;
+    }
+    &__link {
+        color: $color_main;
+    }
+}
+
+  

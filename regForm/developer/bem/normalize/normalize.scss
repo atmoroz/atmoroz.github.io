@@ -1,0 +1,21 @@
+$color_dark: #333333;
+$color_main: #f89921;
+$color_gray: #999999;
+$font_main:  400 14px/18px 'Roboto', sans-serif;
+body {
+    background: #e0e0e0;
+    font: $font_main;
+    color: $color_main;
+}
+.fa-venus::before,
+.fa-mars::before {
+    font-size: 17px;;
+}
+
+.fa-map-marker::before,
+.fa-question-circle-o::before {
+    font-size: 20px;
+}
+.fa {
+    border-bottom: 0;
+}

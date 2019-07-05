@@ -1,0 +1,14 @@
+include ../form/form.pug
+include ../header/header.pug
+include ../footer/footer.pug
+mixin login()
+    .login.login_position_center
+        .login__container
+            .login__container_wrapper_main
+                .login__header
+                    +header()
+                .login__form
+                    +form()
+            .login__container_wrapper_footer
+                .login__footer
+                    +footer()

@@ -1,0 +1,25 @@
+.header {
+    &__title {
+        font: 700 24px/18px 'Roboto', sans-serif;
+        color: $color_dark;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &_style_decor {
+        width: 7px;
+        height: 7px;
+        background: #aaaaaa;
+        border-radius: 5px;
+        margin: 0 auto;
+        &::before {
+            @include after-before-text;
+            left: 0;
+            background: linear-gradient(to right, rgba(170,170,170,0) 0%,rgba(170,170,170,1) 100%);
+        }
+        &::after {
+            @include after-before-text;
+            right: 0;
+            background: linear-gradient(to right, rgba(170,170,170,1) 0%,rgba(170,170,170,0) 100%);
+        }
+    }    
+}

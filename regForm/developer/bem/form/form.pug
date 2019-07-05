@@ -1,0 +1,54 @@
+mixin form()
+    .form
+        form.form__form(action="")
+            .form__item
+                .form__sex
+                    .form__input_text I am
+                    .form__sex_icon.form__sex_icon_man
+                        i(class="fa fa-mars" aria-hidden="true")
+                    .form__sex_icon.form__sex_icon_woman
+                        i(class="fa fa-venus" aria-hidden="true")
+            .form__item
+                .form__input
+                    .form__input_text
+                        label(for="age") Year of birth
+                    select(type="text" name="age" class="form__input_type_select" )
+                span.form__error_message.form__error_age
+                    | You must be at least 18 year old
+            .form__item
+                .form__input
+                    .form__input_text
+                        label(for="email") Email
+                    input(type="email" name="email" class="form__input_type_input")
+                span.form__error_message.form__error_email
+                    | Please include an ‘@’ in the email address
+            .form__item
+                .form__input
+                    .form__input_text
+                        label(for="password") Password
+                    input(type="password" name="password" class="form__input_type_input")
+                span.form__error_message.form__error_password
+                    | This field can't be empty
+            .form__item
+                .form__input
+                    .form__input_text
+                        label(for="postalCode") Postal Code
+                    input(type="text" name="postalCode" class="form__input_type_input")
+                span.form__error_message.form__error_postalCode
+                    | This field can't be empty
+            .form__item
+                .form__info
+                    .form__location
+                        .form__location_icons_map
+                            i(class="fa fa-map-marker" aria-hidden="true")
+                            .form__location_text 
+                                | E.g. Berlin or 10432
+                    .form__questions
+                        .form__questions_icons_questions
+                            i(class="fa fa-question-circle-o" aria-hidden="true")
+                span.form__info_message.form__info_questions
+                    | We don’t use postal codes to cantact members directly
+
+
+//.form__sex_icon_checked
+//form__input_input

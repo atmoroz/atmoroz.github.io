@@ -1,0 +1,142 @@
+@import '../normalize/normalize.scss';
+
+$color_grey: #bababa;
+$border_bottom_grey: 1px solid $color_grey;
+
+@mixin display_type_flex {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+@mixin message {
+    position: absolute;
+    right: -215px;
+    bottom: -6px;
+    color: #fff;
+    font-size: 12px;
+    background: #ff3000;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    max-width: 190px;
+    width: 100%;
+    padding: 11px 21px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+@mixin message_before {
+    position: absolute;
+    content: '';
+    border: 8px solid transparent;	
+    border-right: 8px solid #ff3000;
+    left: -16px;
+    top: calc(50% - 8px);
+}
+
+.form {
+    &__item {
+        position: relative;
+        height: 40px;
+        margin-bottom: 20px;
+        &:nth-child(5) {
+            margin-bottom: 6px;;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }  
+    }
+    &__sex {
+        @include display_type_flex;
+        &_icon {
+            text-align: center;
+            width: 40px;
+            padding: 10px 0;
+            color: $color_grey;
+            border-bottom: $border_bottom_grey;
+            &:hover {
+                cursor: pointer;
+                border-bottom: 1px solid $color_main;
+                color: $color_main;
+                transition: color  .3s,
+                            border-bottom .3s;
+            }
+            &_checked {
+                border-bottom: 1px solid $color_main;
+                color: $color_main;
+            }
+        }
+    }
+    &__input {
+        position: relative;
+        @include display_type_flex;
+        &_type_input,
+        &_type_select {
+            width: 100%;
+            border: none;
+            border-bottom: $border_bottom_grey;
+            padding: 10px 0;
+            outline: none;
+            font: $font_main;
+            color: $color_dark;
+        }
+        &_text {
+            min-width: 100px;
+            color: $color_main;  
+        }
+    }
+    &__info {
+        @include display_type_flex;
+        justify-content: space-between;
+        color: $color_gray;
+        &_message {
+            display: none;
+            @include message;
+            color: $color_dark;
+            bottom: -15px;
+            background-color: #fff;
+            box-shadow: -3px 2px 8px 0px rgba(0, 0, 0, 0.3);
+            &::before {
+                @include message_before;
+                border-right-color: #fff;
+            }
+        }
+        &_questions {
+            display: none;
+        }
+    } 
+    &__location {
+        &_icons_map {
+            display: flex;
+            align-items: center;
+        }
+        &_text {
+            font: $font_main;
+            font-style: 12px;
+            margin-left: 16px;
+        }
+    }
+    &__questions {
+        &_icons_questions {
+            cursor: pointer;
+        }
+    }
+    &__error {
+        &_message {
+            display: none;
+            @include message;
+            &::before {
+                @include message_before;
+            }
+        }
+        &_postalCode,
+        &_password,
+        &_email,
+        &_age {
+            display: none;
+        }
+    }
+}  
+
+
+  
